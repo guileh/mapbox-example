@@ -6,32 +6,32 @@ Mapbox.setAccessToken('pk.eyJ1IjoiZ3VpbGhlcm1laGQiLCJhIjoiY2oycW94eHpoMDJpZTJxbj
 
 export default class App extends Component<{}> {
 
-  renderSede4 () {
+  renderLugarUm () {
     return (
       <Mapbox.PointAnnotation
-        key='sede4'
-        id='sede4'
+        key='LugarUm'
+        id='LugarUm'
         coordinate={[-47.90238126,-15.73643729]}>
 
         <View style={styles.annotationContainer}>
           <View style={styles.annotationFill} />
         </View>
-        <Mapbox.Callout title='BB Sede 4, seu passeio começa aqui!' />
+        <Mapbox.Callout title='Seu passeio começa aqui!' />
       </Mapbox.PointAnnotation>
     )
   }
 
-  renderCapitalDigital () {
+  renderLugarDois () {
     return (
       <Mapbox.PointAnnotation
-        key='capitalDigital'
-        id='capitalDigital'
+        key='LugarDois'
+        id='LugarDois'
         coordinate={[-47.90885483,-15.71067416]}>
 
         <View style={styles.annotationContainer}>
           <View style={styles.annotationFill} />
         </View>
-        <Mapbox.Callout title='Capital Digital, seu passeio começa aqui!' />
+        <Mapbox.Callout title='Seu passeio acaba aqui!' />
       </Mapbox.PointAnnotation>
     )
   }
@@ -51,8 +51,8 @@ export default class App extends Component<{}> {
             centerCoordinate={[-47.9085,-15.7172]}
             style={styles.container}
             showUserLocation={true}>
-            {this.renderSede4()}
-	    {this.renderCapitalDigital()}
+            {this.renderLugasUm()}
+	    {this.renderLugarDois()}
         </Mapbox.MapView>
       </View>
     );
